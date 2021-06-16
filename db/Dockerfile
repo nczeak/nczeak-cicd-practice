@@ -1,1 +1,1 @@
-FROM ubuntu
+FROM postgres:13.3-alpine as build
