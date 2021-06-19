@@ -5,14 +5,6 @@ ARG APP_ENV=dev
 # ---------------------
 FROM apache/airflow:2.1.0-python3.8 as build
 
-# --- Install Python ---
-RUN apt-get update
-RUN apt-get install -y sudo
-RUN apt-get install --no-install-recommends -y python3.8 python3-pip python3.8-dev
-
-# --- Install Python dependencies ---
-RUN pip3 install -y apache-airflow
-
 # ----------------------
 # Create dev environment
 # ----------------------
